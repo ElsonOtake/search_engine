@@ -1,4 +1,4 @@
-articles = [
+seeds = [
   {
     text: 'ALGOL is a family of imperative computer programming languages originally developed in 1958. ALGOL h'\
           'eavily influenced many other languages and was the standard method for algorithm description used by'\
@@ -151,8 +151,8 @@ articles = [
   }
 ]
 
-articles.each do |article|
+seeds.each do |seed|
   article = Article.new
-  article.text = info[:text]
+  article.text = seed[:text]
   article.save
 end
