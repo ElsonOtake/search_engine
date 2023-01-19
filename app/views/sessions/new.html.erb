@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <%= content_tag :h1, flash[:notice] %>
+<% else %>
+  <%= content_tag :h1, "Please Sign in", class: "m-2" %>
+<% end %>
+<%= form_with url: sessions_path do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control m-2 w-75", placeholder: "Name" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign In!", class:'btn btn-secondary m-2 w-75' %>
+  </div>
+<% end %>
