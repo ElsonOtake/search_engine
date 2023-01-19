@@ -42,13 +42,12 @@ export default class extends Controller {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
       this.store_analytic({
-        keyword: this.keywordTarget.value,
+        keyword: this.keywordTarget.value.trim().toLowerCase(),
         results: count,
       })
     }, 2500);
     let count = 0;
     const articles = document.querySelectorAll(".card");
-    // const found = document.querySelector(".found");
     articles.forEach(article => {
       const isVisible = this.keyword.every((key) => article.innerText.toLowerCase().includes(key));
       article.classList.toggle("hide", !isVisible);
