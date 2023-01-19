@@ -5,19 +5,23 @@ export default class extends Controller {
   static targets = [ "keyword" ]
   
   clear() {
-    const input = document.querySelector("input")
-    input.value = "";
+    const input = document.querySelector("input");
+    const articles = document.querySelectorAll("article");
+    input.value = ""; 
+    articles.forEach(article => {
+      article.classList.remove("hide");
+    })
   }
 
   input() {
     const articles = document.querySelectorAll("article")
     articles.forEach(article => {
-      const isVisible = article.firstChild.nextSibling.text.toLowerCase().includes(this.keyword.toLowerCase());
+      const isVisible = this.keyword.every((key) => article.firstChild.nextSibling.text.toLowerCase().includes(key))
       article.classList.toggle("hide", !isVisible);
     })
   }
 
   get keyword() {
-    return this.keywordTarget.value
+    return this.keywordTarget.value.toLowerCase().split(" ");
   }
 }
