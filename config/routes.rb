@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
+  root 'sessions#new'
+  
   namespace :api do
     namespace :v1 do
-      resources :people
       resources :people, only: %i[index show] do
         resources :analytics, only: %i[index show create]
       end
     end
   end
-  root 'sessions#new'
+  
   resources :sessions, only: %i[new create destroy]
   
   resources :people, only: %i[new create] do
