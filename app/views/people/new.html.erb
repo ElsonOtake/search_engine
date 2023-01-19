@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+  <%= content_tag :h1, flash[:notice] %>
+<% else %>
+  <%= content_tag :h1, "Please Sign up", class: "m-2" %>
+<% end %>
+<%= form_for @person do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control m-2 w-75", placeholder: "Name" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign Up", class:'btn btn-secondary m-2 w-75' %>
+  </div>
+<% end %>
