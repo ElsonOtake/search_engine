@@ -26,7 +26,7 @@ export default class extends Controller {
     fetch(`../../../api/v1/people/${user_id}/analytics`, configObj);
   }
 
-  clear() {
+  reset() {
     const input = document.querySelector(".keyword");
     const articles = document.querySelectorAll(".card");
     input.value = "";
