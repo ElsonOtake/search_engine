@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   
   resources :people, only: %i[new create] do
     resources :articles, only: %i[index show]
+    resources :analytics, only: %i[index show]
   end
 end
