@@ -3,9 +3,8 @@
     <h1>Articles</h1>
     <div data-controller="search">
       <input data-search-target="keyword" data-action="input->search#input" type="text">
-      <button data-action="click->search#search">Search</button>
+      <button data-action="click->search#clear">Clear</button>
     </div>
   </div>
-  <%= paginate @articles %>
   <%= render @articles %>
 </main>
