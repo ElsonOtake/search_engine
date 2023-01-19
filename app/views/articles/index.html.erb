@@ -1,13 +1,13 @@
-<main class="container">
+<div class="container">
   <div class="header">
     <h1>Articles</h1>
-    <div data-controller="search">
-      <input data-search-target="keyword" data-action="input->search#input" class="keyword" type="text">
-      <button data-action="click->search#clear">Clear</button>
+    <div data-controller="search" class="search_box">
+      <input data-search-target="keyword" data-action="input->search#input" class="keyword" type="text" placeholder="Search">
+      <button data-action="click->search#reset">Reset</button>
     </div>
   </div>
   <p class="found">
     <%= "#{pluralize(@articles.size, "article")} found" %>
   </p>
   <%= render @articles %>
-</main>
+</div>

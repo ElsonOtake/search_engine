@@ -2,7 +2,7 @@
   font-family: 'Lato', 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.article {
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,10 +34,21 @@
   display: none;
 }
 
+.keyword {
+  width: 100%;
+}
+
 .navbar-nav {
   display: flex;
   width: 100%;
   padding-right: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.search_box {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
 }
