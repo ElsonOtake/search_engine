@@ -18,9 +18,9 @@ export default class extends Controller {
     this.timeout = setTimeout(() => {
       console.log('keyword', this.keyword);
     }, 3000)
-    const articles = document.querySelectorAll("article")
+    const articles = document.querySelectorAll(".card")
     articles.forEach(article => {
-      const isVisible = this.keyword.every((key) => article.firstChild.nextSibling.text.toLowerCase().includes(key))
+      const isVisible = this.keyword.every((key) => article.innerText.toLowerCase().includes(key))
       article.classList.toggle("hide", !isVisible);
     })
   }
