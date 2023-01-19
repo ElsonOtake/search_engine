@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resources :people
       resources :people, only: %i[index show] do
         resources :analytics, only: %i[index show create]
       end
