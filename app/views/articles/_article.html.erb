@@ -1,3 +1,6 @@
-<article class="article">
-  <%= link_to article.text, article_path(article) %>
-</article>
+<%= turbo_frame_tag article do %>
+  <article class="article">
+    <%= link_to article.text,
+      article_path(article) %>
+  </article>
+<% end %>

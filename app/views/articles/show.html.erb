@@ -2,7 +2,9 @@
   <%= link_to sanitize("&larr; Back to articles"), articles_path %>
   <div class="header">
     <h1>
-      <%= @article.text %>
+      <%= turbo_frame_tag @article do %>
+        <%= @article.text %>
+      <% end %>
     </h1>
   </div>
 </main>
