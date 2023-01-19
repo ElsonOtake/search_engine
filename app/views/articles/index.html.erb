@@ -1,6 +1,10 @@
 <main class="container">
   <div class="header">
     <h1>Articles</h1>
+    <div data-controller="search">
+      <input data-search-target="keyword" data-action="input->search#input" type="text">
+      <button data-action="click->search#search">Search</button>
+    </div>
   </div>
   <%= paginate @articles %>
   <%= render @articles %>
