@@ -1,10 +1,8 @@
 <main class="container">
-  <%= link_to sanitize("&larr; Back to articles"), articles_path %>
+  <%= link_to sanitize("&larr; Back to articles"), person_articles_path(current_person) %>
   <div class="header">
     <h1>
-      <%= turbo_frame_tag @article do %>
-        <%= @article.text %>
-      <% end %>
+      <%= @article.text %>
     </h1>
   </div>
 </main>
