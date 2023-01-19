@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    session_params = params.permit(:name)
-    @person = Person.find_by(name: session_params[:name])
+    @person = Person.find_by_name(session_params[:name])
     if @person
       session[:person_id] = @person.id
       redirect_to person_articles_path(@person.id)
@@ -15,5 +14,11 @@ class SessionsController < ApplicationController
     session[:person_id] = nil
     flash[:notice] = 'You have been signed out!'
     redirect_to new_session_path
+  end
+
+  private
+
+  def session_params
+    params.permit(:name)
   end
 end
