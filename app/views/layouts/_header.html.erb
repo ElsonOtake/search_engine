@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <% if logged_in? %>
+          <li class="nav-item p-3">
+            <%= button_to 'Sign out', session_path(current_person), method: :delete, class: "nav-link bg-transparent border-0" %>
+          </li>
+          <li class="nav-item p-3">
+            <%= current_person.name %>
+          </li>
+        <% else %>
+          <% if request.path == '/sessions/new' %>
+            <li class="nav-item p-3">
+              <%= link_to 'Sign up', new_person_path, class: "nav-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item p-3">
+              <%= link_to 'Sign in', new_session_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
