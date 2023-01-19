@@ -155,4 +155,4 @@ seeds.each do |seed|
   article = Article.new
   article.text = seed[:text]
   article.save
-end
+end if Article.count.zero?
