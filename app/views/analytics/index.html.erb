@@ -1,0 +1,19 @@
+<div class="card mx-3">
+  <div class="card-body">
+    <h1><%= current_person.name %> - Analytics</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>Results</th>
+          <th>Search</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @analytics.each do |analytic| %>
+          <%= render analytic %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

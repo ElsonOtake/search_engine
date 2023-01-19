@@ -1,0 +1,5 @@
+<tr>
+  <td><%= analytic.keyword %></td>
+  <td><%= analytic.results %></td>
+  <td><%= time_ago_in_words(Time.at(analytic.updated_at.to_i)) %></td>
+</tr>
