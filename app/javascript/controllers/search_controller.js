@@ -3,16 +3,15 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="search"
 export default class extends Controller {
   static targets = [ "keyword" ]
-  const articles = document.querySelectorAll("article")
-
-  search() {
-
+  
+  clear() {
+    const input = document.querySelector("input")
+    input.value = "";
   }
 
   input() {
+    const articles = document.querySelectorAll("article")
     articles.forEach(article => {
-      // console.log(elem.firstChild.nextSibling.text);
-      // console.log(elem.className);
       const isVisible = article.firstChild.nextSibling.text.toLowerCase().includes(this.keyword.toLowerCase());
       article.classList.toggle("hide", !isVisible);
     })
