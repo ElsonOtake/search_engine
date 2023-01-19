@@ -4,25 +4,59 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "keyword" ];
 
+  update_count(count) {
+    const found = document.querySelector(".found");
+    if (count === 1) {
+      found.innerText = "1 article found";
+    } else {
+      found.innerText = `${count} articles found`;
+    };
+  }
+
+  store_analytic(analytic) {
+    const configObj = {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(analytic)
+    };
+    let user_id = window.location.pathname.split("/")[2];
+    fetch(`../../../api/v1/people/${user_id}/analytics`, configObj);
+  }
+
   clear() {
-    const input = document.querySelector("input");
-    const articles = document.querySelectorAll("article");
-    input.value = ""; 
+    const input = document.querySelector(".keyword");
+    const articles = document.querySelectorAll(".card");
+    input.value = "";
+    let count = 0;
     articles.forEach(article => {
       article.classList.remove("hide");
+      count++;
     })
+    this.update_count(count);
   }
 
   input() {
-    clearTimeout(this.timeout)
+    clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      console.log('keyword', this.keyword);
-    }, 3000)
-    const articles = document.querySelectorAll(".card")
+      this.store_analytic({
+        keyword: this.keywordTarget.value,
+        results: count,
+      })
+    }, 2500);
+    let count = 0;
+    const articles = document.querySelectorAll(".card");
+    // const found = document.querySelector(".found");
     articles.forEach(article => {
-      const isVisible = this.keyword.every((key) => article.innerText.toLowerCase().includes(key))
+      const isVisible = this.keyword.every((key) => article.innerText.toLowerCase().includes(key));
       article.classList.toggle("hide", !isVisible);
-    })
+      if (isVisible) {
+        count++;
+      }
+    });
+    this.update_count(count);
   }
 
   get keyword() {
