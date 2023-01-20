@@ -46,6 +46,7 @@ class Api::V1::PeopleController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def person_params
-      params.fetch(:person, {})
+      allowed_data = %(name).freeze
+      json_payload.select { |allow| allowed_data.include?(allow) }
     end
 end
