@@ -43,6 +43,7 @@
   <summary>Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://sass-lang.com/">Sass</a></li>
     <li><a href="https://github.com/rspec/rspec-rails">RSpec Rails</a></li>
     <li><a href="https://github.com/teamcapybara/capybara">Capybara</a></li>
   </ul>
@@ -71,6 +72,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://elsonotake-search-engine.onrender.com)
+
+- [API documentation](https://elsonotake-search-engine.onrender.com/api-docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +162,7 @@ To generate the API documentation:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Create API documentation**
+- [ ] **Create admin user to assess general data**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
