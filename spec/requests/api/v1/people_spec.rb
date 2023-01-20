@@ -69,9 +69,6 @@ RSpec.describe Person, type: :request do
     before(:each) do
       put "/api/v1/people/#{@person.id}", params: {
         name: 'rename_personname',
-        password: 'rename_password',
-        email: 'rename_personname@email.com',
-        role: 'admin'
       }.to_json
     end
     it 'return success status' do
