@@ -1,13 +1,15 @@
-# frozen_string_literal: true
+require "rails_helper"
 
-require 'rails_helper'
-
-RSpec.feature 'Session management', type: :feature do
-  scenario 'User creates a new session' do
-    visit '/sessions/new'
-
-    click_button 'Sign In!'
-
-    expect(page)
+RSpec.describe 'Session', type: :request do
+  before(:each) do
+    get root_path
+  end
+  describe 'GET /' do
+    it 'returns http success' do
+      expect(response).to have_http_status(:success)
+    end
+    it 'render template sessions/new' do
+      expect(response).to render_template('sessions/new')
+    end
   end
 end
