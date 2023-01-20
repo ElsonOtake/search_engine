@@ -25,10 +25,18 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
+          url: 'https://elsonotake-search-engine.onrender.com/',
+          variables: {
+            defaultHost: {
+              default: 'elsonotake-search-engine.onrender.com'
+            }
+          }
+        },
+        {
           url: 'http://localhost:3000/',
           variables: {
             defaultHost: {
-              default: 'localhost:3000'
+              default: 'elsonotake-search-engine.onrender.com'
             }
           }
         }
