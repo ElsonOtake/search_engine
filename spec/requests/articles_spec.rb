@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Article', type: :request do
 
-  describe 'GET /people/1/articles' do
+  describe 'GET /people/:person_id/articles' do
     before(:each) do
       get person_articles_path(1)
     end
