@@ -1,0 +1,355 @@
+---
+openapi: 3.0.1
+info:
+  title: Search engine API V1
+  description: Take home activity
+  version: v1
+paths:
+  "/api/v1/people/{person_id}/analytics":
+    get:
+      summary: List analytics
+      tags:
+      - Analytics
+      description: List all analytics
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  keyword:
+                    type: string
+                  results:
+                    type: integer
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+    post:
+      summary: Create a analytic
+      tags:
+      - Analytics
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  keyword:
+                    type: string
+                  results:
+                    type: integer
+                  person_id:
+                    type: integer
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '422':
+          description: Unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyword:
+                  type: string
+                results:
+                  type: integer
+              required:
+              - keyword
+        description: Create a analytic
+  "/api/v1/people/{person_id}/analytics/{id}":
+    get:
+      summary: Show a analytic
+      tags:
+      - Analytics
+      description: Show a analytic
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        description: Analytic identification
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  keyword:
+                    type: string
+                  results:
+                    type: integer
+                  person_id:
+                    type: integer
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+    put:
+      summary: Updates a analytic
+      tags:
+      - Analytics
+      description: Updates a analytic
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        description: Analytic identification
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  keyword:
+                    type: string
+                  results:
+                    type: integer
+                  person_id:
+                    type: integer
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '404':
+          description: Not Found
+        '422':
+          description: Unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyword:
+                  type: string
+                results:
+                  type: integer
+        description: Updates a analytic
+    delete:
+      summary: Delete a analytic
+      tags:
+      - Analytics
+      description: Delete a analytic
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        description: Analytic identification
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: OK
+        '404':
+          description: Not Found
+  "/api/v1/people":
+    get:
+      summary: List people
+      tags:
+      - People
+      description: List all people
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+    post:
+      summary: Create a person
+      tags:
+      - People
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '422':
+          description: Unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+              required:
+              - name
+        description: Create a person
+  "/api/v1/people/{id}":
+    get:
+      summary: Show a person
+      tags:
+      - People
+      description: Show a person
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+    put:
+      summary: Updates a person
+      tags:
+      - People
+      description: Updates a person
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+        '404':
+          description: Not Found
+        '422':
+          description: Unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+        description: Updates a person
+    delete:
+      summary: Delete a person
+      tags:
+      - People
+      description: Delete a person
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: Person identification
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: OK
+        '404':
+          description: Not Found
+servers:
+- url: http://localhost:3000/
+  variables:
+    defaultHost:
+      default: localhost:3000
