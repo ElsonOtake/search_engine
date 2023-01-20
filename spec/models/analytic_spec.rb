@@ -23,6 +23,11 @@ RSpec.describe Analytic, type: :model do
       expect(@analytic).to_not be_valid
     end
 
+    it 'is not valid with non numeric data on results' do
+      @analytic.results = "five"
+      expect(@analytic).to_not be_valid
+    end
+
     it 'is not valid without person_id' do
       @analytic.person_id = nil
       expect(@analytic).to_not be_valid
