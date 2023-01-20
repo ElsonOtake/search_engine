@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 seeds = [
   {
     text: 'ALGOL is a family of imperative computer programming languages originally developed in 1958. ALGOL h'\
@@ -151,8 +153,10 @@ seeds = [
   }
 ]
 
-seeds.each do |seed|
-  article = Article.new
-  article.text = seed[:text]
-  article.save
-end if Article.count.zero?
+if Article.count.zero?
+  seeds.each do |seed|
+    article = Article.new
+    article.text = seed[:text]
+    article.save
+  end
+end

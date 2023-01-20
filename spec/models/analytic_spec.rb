@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Analytic, type: :model do
   before(:each) do
     @person = Person.create(name: 'Analytic Jones')
-    @analytic = Analytic.new(keyword: "Open Source", results: 12, person_id: @person.id)
+    @analytic = Analytic.new(keyword: 'Open Source', results: 12, person_id: @person.id)
   end
 
   context 'New analytic' do
