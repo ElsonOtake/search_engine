@@ -26,7 +26,7 @@
 
 # 📖 Blog <a name="about-project"></a>
 
-**Search engine** is a real-time articles search box. Have analytics that displays what users were searching.
+**Search engine** is a real-time articles search box. As a person types, results filter instantly and their search keyword is tracked live, with an analytics page displaying what users were searching for.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -62,6 +62,7 @@
 
 - **REST API**
 - **Stimulus**
+- **Real-time search with live analytics tracking**
 - **Tests**
 - **[API documentation](https://swagger.io/solutions/api-documentation/)**
 
@@ -153,7 +154,7 @@ To generate the API documentation:
 👤 **Elson Otake**
 
 - GitHub: [elsonotake](https://github.com/elsonotake)
-- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- X: [@elsonotake](https://x.com/elsonotake)
 - LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
