@@ -5,7 +5,7 @@ module Api
     class AnalyticsController < ApplicationController
       protect_from_forgery with: :null_session
       before_action :find_person
-      before_action :find_analytic, only: %i[update destroy]
+      before_action :find_analytic, only: %i[show update destroy]
 
       # GET /api/v1/people/:person_id/analytics
       def index
@@ -15,7 +15,6 @@ module Api
 
       # GET /api/v1/people/:person_id/analytics/1
       def show
-        @analytic = @person.analytics.find(analytic_params[:id])
         render json: @analytic
       end
 
