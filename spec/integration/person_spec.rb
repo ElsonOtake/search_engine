@@ -88,7 +88,7 @@ describe 'People' do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  path '/api/v1/people/{id}' do
+  path '/api/v1/people/{id}' do # rubocop:disable Metrics/BlockLength
     put 'Updates a person' do
       tags 'People'
       description 'Updates a person'
