@@ -47,11 +47,15 @@ module Api
       private
 
       def find_person
-        @person = Person.find_by_id(analytic_params[:person_id])
+        @person = Person.find(analytic_params[:person_id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'Person not found' }, status: :not_found
       end
 
       def find_analytic
-        @analytic = @person.analytics.find_by_id(analytic_params[:id])
+        @analytic = @person.analytics.find(analytic_params[:id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'Analytic not found' }, status: :not_found
       end
 
       def analytic_params
