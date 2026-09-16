@@ -2,7 +2,7 @@
 
 class SessionsController < ApplicationController
   def create
-    @person = Person.find_by_name(session_params[:name])
+    @person = Person.find_by(name: session_params[:name])
     if @person
       session[:person_id] = @person.id
       redirect_to person_articles_path(@person.id)

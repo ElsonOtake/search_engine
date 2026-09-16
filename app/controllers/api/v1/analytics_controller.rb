@@ -5,7 +5,7 @@ module Api
     class AnalyticsController < ApplicationController
       protect_from_forgery with: :null_session
       before_action :find_person
-      before_action :find_analytic, only: %i[update destroy]
+      before_action :find_analytic, only: %i[show update destroy]
 
       # GET /api/v1/people/:person_id/analytics
       def index
@@ -15,7 +15,6 @@ module Api
 
       # GET /api/v1/people/:person_id/analytics/1
       def show
-        @analytic = @person.analytics.find(analytic_params[:id])
         render json: @analytic
       end
 
@@ -47,11 +46,15 @@ module Api
       private
 
       def find_person
-        @person = Person.find_by_id(analytic_params[:person_id])
+        @person = Person.find(analytic_params[:person_id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'Person not found' }, status: :not_found
       end
 
       def find_analytic
-        @analytic = @person.analytics.find_by_id(analytic_params[:id])
+        @analytic = @person.analytics.find(analytic_params[:id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'Analytic not found' }, status: :not_found
       end
 
       def analytic_params
