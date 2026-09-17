@@ -1,0 +1,20 @@
+.ruby-version
+  h_da978aeed56e72 1
+Gemfile
+  h_da978aeed56e72 6
+.tool-versions
+  h_da978aeed56e72 1
+Gemfile.lock
+  h_da978aeed56e72 305,333
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0adc9a4fa032e48999bde763796a6f0445cd1f14",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}
