@@ -8,7 +8,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -65,16 +64,6 @@
 - **Real-time search with live analytics tracking**
 - **Tests**
 - **[API documentation](https://swagger.io/solutions/api-documentation/)**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://elsonotake-search-engine.onrender.com)
-
-- [API documentation](https://elsonotake-search-engine.onrender.com/api-docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
