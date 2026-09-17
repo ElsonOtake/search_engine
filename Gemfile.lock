@@ -302,6 +302,7 @@ GEM
     zeitwerk (2.8.3)
 
 PLATFORMS
+  arm64-darwin-24
   arm64-darwin-25
   x86_64-darwin-21
   x86_64-linux
@@ -329,7 +330,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.2.8p263
+   ruby 3.4.3p32
 
 BUNDLED WITH
    2.3.25
