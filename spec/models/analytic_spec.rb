@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Analytic, type: :model do
@@ -24,7 +22,7 @@ RSpec.describe Analytic, type: :model do
     end
 
     it 'is not valid with non numeric data on results' do
-      @analytic.results = "five"
+      @analytic.results = 'five'
       expect(@analytic).to_not be_valid
     end
 

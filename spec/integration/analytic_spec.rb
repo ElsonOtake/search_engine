@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 require 'swagger_helper'
 
-describe 'Analytics' do # rubocop:disable Metrics/BlockLength
+describe 'Analytics' do
   before(:each) do
     @person = Person.create(name: 'test_user')
     @analytic = @person.analytics.create(keyword: 'palavra', results: 10)
@@ -52,7 +50,8 @@ describe 'Analytics' do # rubocop:disable Metrics/BlockLength
         schema type: :object,
                properties: {
                  id: { type: :integer }, keyword: { type: :string }, results: { type: :integer },
-                 person_id: { type: :integer }, created_at: { type: :string }, updated_at: { type: :string } }
+                 person_id: { type: :integer }, created_at: { type: :string }, updated_at: { type: :string }
+               }
 
         let(:person_id) { @person.id }
         let(:analytic) { { keyword: 'Palavra Chave', results: 10 } }
@@ -96,8 +95,8 @@ describe 'Analytics' do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  path '/api/v1/people/{person_id}/analytics/{id}' do # rubocop:disable Metrics/BlockLength
-    put 'Updates a analytic' do # rubocop:disable Metrics/BlockLength
+  path '/api/v1/people/{person_id}/analytics/{id}' do
+    put 'Updates a analytic' do
       tags 'Analytics'
       description 'Updates a analytic'
       consumes 'application/json'

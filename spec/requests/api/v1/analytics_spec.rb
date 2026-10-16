@@ -89,7 +89,6 @@ RSpec.describe Analytic, type: :request do
   end
 
   describe 'DELETE api/v1/people/:person_id/analytics/:id' do
-
     it 'return success status' do
       delete "/api/v1/people/#{@person.id}/analytics/#{@analytic.id}"
       expect(response.status).to eq(204)
