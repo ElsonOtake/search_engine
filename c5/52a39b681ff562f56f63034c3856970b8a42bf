@@ -1,0 +1,30 @@
+app/controllers/analytics_controller.rb
+  h_da978aeed56e72 5-7
+spec/features/articles_spec.rb
+  h_da978aeed56e72 14,20
+spec/features/sessions_spec.rb
+  h_da978aeed56e72 16
+spec/integration/analytic_spec.rb
+  h_da978aeed56e72 3,53-54,98-99
+spec/integration/person_spec.rb
+  h_da978aeed56e72 3,89
+spec/models/analytic_spec.rb
+  h_da978aeed56e72 25
+spec/rails_helper.rb
+  h_da978aeed56e72 34
+spec/requests/api/v1/people_spec.rb
+  h_da978aeed56e72 71
+spec/requests/sessions_spec.rb
+  h_da978aeed56e72 1,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c552a39b681ff562f56f63034c3856970b8a42bf",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}
