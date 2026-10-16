@@ -1,0 +1,16 @@
+Gemfile
+  h_da978aeed56e72 9
+Gemfile.lock
+  h_da978aeed56e72 321
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dac92cdfcf0af9489296c5ae0bae60ef4129a4e1",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}

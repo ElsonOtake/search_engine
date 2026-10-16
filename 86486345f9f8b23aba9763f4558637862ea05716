@@ -1,0 +1,14 @@
+spec/integration/person_spec.rb
+  h_da978aeed56e72 91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "86486345f9f8b23aba9763f4558637862ea05716",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}

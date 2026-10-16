@@ -1,0 +1,14 @@
+config/environments/development.rb
+  h_da978aeed56e72 72-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f839abdf595e7f8987a477b17d8afd38b137d455",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}

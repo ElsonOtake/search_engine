@@ -1,0 +1,22 @@
+Gemfile
+  h_da978aeed56e72 6
+.ruby-version
+  h_da978aeed56e72 1
+.tool-versions
+  h_da978aeed56e72 1
+Gemfile.lock
+  h_da978aeed56e72 305,333
+db/schema.rb
+  h_da978aeed56e72 13,15,17-23,26-29,32-35,38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bde460ddfe6b1d7507f139673ad28745c5a9ad0c",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}

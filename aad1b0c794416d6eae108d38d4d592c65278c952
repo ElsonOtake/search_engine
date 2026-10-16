@@ -1,0 +1,15 @@
+app/javascript/controllers/search_controller.js
+  h_da978aeed56e72 7-13,23-25,28-31,33-50,57,77-87
+  h_da978aeed56e72 26-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "aad1b0c794416d6eae108d38d4d592c65278c952",
+  "prompts": {},
+  "humans": {
+    "h_da978aeed56e72": {
+      "author": "Elson Otake <elsonotake@yahoo.com.br>"
+    }
+  }
+}
