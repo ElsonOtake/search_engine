@@ -68,7 +68,7 @@ RSpec.describe Person, type: :request do
   describe 'PUT api/v1/people/:id' do
     before(:each) do
       put "/api/v1/people/#{@person.id}", params: {
-        name: 'rename_personname',
+        name: 'rename_personname'
       }.to_json
     end
     it 'return success status' do
@@ -85,7 +85,6 @@ RSpec.describe Person, type: :request do
   end
 
   describe 'DELETE api/v1/people/:id' do
-
     it 'return success status' do
       delete "/api/v1/people/#{@person.id}"
       expect(response.status).to eq(204)

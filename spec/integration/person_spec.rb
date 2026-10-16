@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 require 'swagger_helper'
 
-describe 'People' do # rubocop:disable Metrics/BlockLength
+describe 'People' do
   before(:each) do
     @person = Person.create(name: 'test_user')
   end
@@ -88,7 +86,7 @@ describe 'People' do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  path '/api/v1/people/{id}' do # rubocop:disable Metrics/BlockLength
+  path '/api/v1/people/{id}' do
     put 'Updates a person' do
       tags 'People'
       description 'Updates a person'

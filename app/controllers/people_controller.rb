@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PeopleController < ApplicationController
   def new
     @person = Person.new
